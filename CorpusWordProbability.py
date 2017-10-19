@@ -37,6 +37,3 @@ corpus = "There are functions that take low dimension input and map it onto high
 input = "functions"
 dictionary = convert_corpus_dict_with_next_word_frequencies(corpus)
 checkMostSuccessiveFrequentWord(input,dictionary)
-
-
-
