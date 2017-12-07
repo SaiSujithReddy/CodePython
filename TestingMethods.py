@@ -32,3 +32,26 @@ for x in reversed(array):
 
 for x in range(3,0,-1):
     print(x)
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [123, 234, 456]
+d = {'a': [], 'b': []}
+d['a'].append(1)
+d['a'].append(2)
+print(d['a'])
+print(d)
+
+
+
+list_ofLists = [[1,3],[2,6],[8,10],[15,18]]
+
+
+for i in list_ofLists:
+    print(i[0])
+
+
+
+
+print("hello")
+check_row=[[0 for i in range(9)] for j in range(9)]
+print(check_row)

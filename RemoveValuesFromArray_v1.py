@@ -13,12 +13,12 @@ def remove_given_value_from_array(array,value):
     return array
 
 
-input_array = [1,2,3,4,4,4,4,4,5,6,7,8]
+input_array1 = [1,2,3,4,4,4,4,4,5,6,7,8]
 input_array = [1]
 input_array = [1,2,3]
 input_array = [4,4,44,4,4]
 input_array = [4,4,4,4,4,4]
 
-output_array = remove_given_value_from_array(input_array,4)
+output_array = remove_given_value_from_array(input_array1,4)
 print(output_array)
 print(len(output_array))
