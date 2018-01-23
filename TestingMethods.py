@@ -55,3 +55,11 @@ for i in list_ofLists:
 print("hello")
 check_row=[[0 for i in range(9)] for j in range(9)]
 print(check_row)
+
+
+
+for i in range(0,5):
+    print(i)
+
+string = "catsanddogs"
+print(len(string))

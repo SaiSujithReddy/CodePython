@@ -56,7 +56,7 @@ def longestSubStringWithOutRepetitions(string):
 
 # Driver program to test the above function
 string = "ABDEFGABEF"
-print "The input string is " + string
+print("The input string is ", string)
 length = longestSubStringWithOutRepetitions(string)
 print ("The length of the longest non-repeating character" +
        " substring is " + str(length))

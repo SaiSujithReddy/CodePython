@@ -29,7 +29,28 @@ for i in range(0, len(list_ofLists)):
 
 
 list_ofLists = [[1,3],[2,6],[8,10],[15,18]]
-merge_intervals(list_ofLists)
+def print_lists(list_ofLists):
+    for i in list_ofLists:
+        print(i[0],i[1])
+
+print_lists(list_ofLists)
+new_list = []
+for i in range(len(list_ofLists)-1):
+    print(i)
+    print(list_ofLists[i])
+    if list_ofLists[i][1] > list_ofLists[i+1][0]:
+        #temp = list_ofLists[i][1]
+        #list_ofLists[i][1] = list_ofLists[i+1][1]
+        #list_ofLists[i + 1][0] = list_ofLists[i][0]
+        new_list.append([list_ofLists[i][0],list_ofLists[i+1][1]])
+        #list_ofLists[i+1][0] = temp
+        i += 1
+    else:
+        new_list.append([list_ofLists[i][0], list_ofLists[i][1]])
+print_lists(new_list)
+
+
+#merge_intervals(list_ofLists)
 
 
 '''
