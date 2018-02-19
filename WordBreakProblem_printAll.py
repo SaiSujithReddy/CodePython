@@ -14,23 +14,25 @@ A solution is ["cats and dog", "cat sand dog"].
 
 '''
 
+
+
+# Solution with name _v1 is working code
 new_dict ={}
+
 def word_break_2(string):
     len_of_string = len(string)
-
     result = []
-
     if len_of_string == 0:
         return result
 
     if string in new_dict:
         result.append(string)
 
-    for i in range(1,len_of_string):
+    for i in range(0, len_of_string):
         if string[i:] in dictionary:
             temp = word_break_2(string[:i])
-            if len(temp) !=0 :
-                for j in range(0,len(temp)):
+            if temp is not None:
+                for j in range(0, len(temp)):
                     result.append(temp[j] + " " + temp)
 
     new_dict[string] = result

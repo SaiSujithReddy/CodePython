@@ -22,7 +22,7 @@ class SortAWord:
         self.word = word
         self.dict = {}
         self.sorted_dict = []
-        print(sys.version)
+        #print(sys.version)
 
     def find_char_freq_v1(self):
         self.dict = Counter(self.word)

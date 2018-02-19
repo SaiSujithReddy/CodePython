@@ -2,7 +2,7 @@
 # try zip / enumerate
 
 
-def longestCommonPrefix(self, strs):
+def longestCommonPrefix(strs):
     """
     :type strs: List[str]
     :rtype: str

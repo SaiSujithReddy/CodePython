@@ -18,7 +18,6 @@ Note:
 The input string length won't exceed 1000.
 
 '''
-#import xrange
 
 '''
 Python3 range = python2 xrange
@@ -30,27 +29,26 @@ put_in_to dictionary each unique letter and add count as value
 
 #solution from leetcode
 
-# Time - o(n**2)
 
+# Time - o(n)
+# previous solution wasTime - o(n**2)
+#
 
 def count_substrings(S):
-    N = len(S)
-    ans = 0
-    for center in range(2*N - 1):
-        left = int(center / 2)
-        right = int(left + center % 2)
-        # print(left)
-        # print(right)
-        # print(N)
-        # print(left)
-        # print(right)
-        # print(S[left])
-        # print(S[right])
-        while left >= 0 and right < N and S[left] == S[right]:
-            ans += 1
-            left -= 1
-            right += 1
-    return ans
+    def manachers(S):
+        A = '@#' + '#'.join(S) + '#$'
+        Z = [0] * len(A)
+        center = right = 0
+        for i in range(1, len(A) - 1):
+            if i < right:
+                Z[i] = min(right - i, Z[2 * center - i])
+            while A[i + Z[i] + 1] == A[i - Z[i] - 1]:
+                Z[i] += 1
+            if i + Z[i] > right:
+                center, right = i, i + Z[i]
+        return Z
+
+    return sum((v+1)/2 for v in manachers(S))
 
 
 print(count_substrings("aabcde"))
