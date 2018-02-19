@@ -1,4 +1,5 @@
 #https://leetcode.com/problems/lru-cache/discuss/45926
+#https://github.com/suyash248/ds_algo/blob/master/Misc/LRUcache.py
 
 class Node:
     def __init__(self, k, v):
@@ -6,6 +7,7 @@ class Node:
         self.val = v
         self.prev = None
         self.next = None
+
 
 class LRUCache:
     def __init__(self, capacity):
@@ -35,6 +37,7 @@ class LRUCache:
             self._remove(n)
             del self.dic[n.key]
 
+    @staticmethod
     def _remove(self, node):
         p = node.prev
         n = node.next

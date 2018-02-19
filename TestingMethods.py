@@ -63,3 +63,15 @@ for i in range(0,5):
 
 string = "catsanddogs"
 print(len(string))
+
+
+from collections import defaultdict
+
+dfdict =  defaultdict(list)
+#dfdict["hi"]
+print(dfdict["hi"])
+print(dfdict["hi"])
+
+normaldict =  {}
+print(normaldict["hi"])
+# print(dfdict.get("hi"))

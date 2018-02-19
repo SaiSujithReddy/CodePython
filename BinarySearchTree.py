@@ -23,7 +23,7 @@ def in_order(root):
     if not root:
         return
     in_order(root.leftChild)
-    print root.data
+    print(root.data)
     in_order(root.rightChild)
 
 r = Node(3)
