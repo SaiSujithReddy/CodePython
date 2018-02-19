@@ -1,3 +1,9 @@
+'''
+
+Note BFS == level order for proper (regular) trees
+
+'''
+
 class BST:
     def __init__(self,val):
         self.data = val
