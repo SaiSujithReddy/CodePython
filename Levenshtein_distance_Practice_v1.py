@@ -5,7 +5,11 @@ def find_edit_distance(string1,string2):
     matrix = []
     for x in range(0,n+1):
         matrix.append([0 for x in range(0,m+1)])
-
+    # Have to initilize the first row and first column 
+    # TODO 
+    # missing
+    
+    
     print(matrix)
 
     for i in range(n):
