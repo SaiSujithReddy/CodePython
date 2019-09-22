@@ -1,0 +1,15 @@
+import heapq
+import collections
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        # heapq.heapify(words)
+        # heapq.heappush(words, len(words))
+        # print(words)
+        
+        count = collections.Counter(words)
+        heap_of_words = [(-freq, word) for word, freq in count.items()]
+        print("heap before ", heap_of_words)
+        heapq.heapify(heap_of_words)
+        print("heap after ", heap_of_words)
+        return [heapq.heappop(heap_of_words)[1] for _ in range(k)]
+        
