@@ -1,0 +1,36 @@
+>>> from pyspark.sql import SparkSession
+>>> spark = SparkSession.builder.getOrCreate()
+>>> df = spark.sql("select 'spark' as hello " )
+>>> df.show()
+
+fifa_df = spark.read.csv('file:///home.../fifa.csv', inferSchema = True, header = True)
+fifa_df.show()
+fifa_df.printSchema()
+fifa_df.columns
+fifa_df.count()   --> number of rows
+len(fifa_df.columns)
+fifa_df.describe('Coach name).show() --> we get mean, min, std of that column
+fifa_df.select('Player Name','coach name').show()
+fifa_df.filter(fifa_df.MatchID=='10096').show()
+fifa_df.filter( ( fifa_df.MatchID=='10096') & ( fifa_df.EventId=='2')).show()
+
+fifa_df.orderBy(fifa_df.MatchID).show()
+
+
+
+or writing directly in sql 
+# First register a temporary table
+# Converting a df to sql table
+fifa_df.registerTempTable('fifa_table')
+sqlContext.sql('select * from fifa_table').show()
+
+
+---------------------------------------------------------------------------------------
+
+superhero_df = spark.read.csv('file:///home....csv', infer_schema=True, header=True)
+superhero_df.show(10)
+superhero_df.printSchema()
+superhero_df.filter(superhero_df.Gender='Male').count()
+
+sqlContext.sql('select distinct(eye_color) from superheroes_table').count()
+sqlContext.sql('select max(Weight) from superheroes_table').show()
